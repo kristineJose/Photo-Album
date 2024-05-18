@@ -1,3 +1,9 @@
+:host {
+  --ion-background-color: #ffffff;
+  --ion-text-color: #b02bb4;
+}
+
+
 #container {
   text-align: center;
 
@@ -24,4 +30,44 @@
 
 #container a {
   text-decoration: none;
+}
+
+
+/* Styling for the ion-tab-button */
+ion-tab-button {
+  color: #ffffff; 
+  font-weight: bold; 
+  padding: 10px; 
+}
+
+/* Styling for the ion-icon */
+ion-icon {
+  font-size: 24px; 
+  margin-bottom: 5px; 
+}
+
+/* Styling for the active tab */
+ion-tab-button.tab-selected {
+  background-color: #f0f0f0; 
+  border-bottom: 3px solid #f073a7; 
+}
+
+/* gallery.component.scss */
+
+/* Set padding and margin to zero to remove default spacing */
+ion-grid, ion-row, ion-col {
+  padding: 9px;
+  margin-top: 10px;
+}
+
+/* Style the ion-col to occupy half of the grid */
+ion-col {
+  width: 10%;
+}
+
+/* Style the ion-img to fit its container */
+ion-img {
+  width: 50%;
+  height: 50%;
+  object-fit: cover; /* Ensures the image fills the container while maintaining aspect ratio */
 }

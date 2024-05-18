@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,22 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  images = [
+    { url: 'assets/img/pic1.jpg' },
+    { url: 'assets/img/pic2.jpeg' },
+    { url: 'assets/img/pic3.jpg' },
+    { url: 'assets/img/pic6.jpg' }, 
+    { url: 'assets/img/pic1.jpg' },
+    { url: 'assets/img/pic2.jpeg' },
+    { url: 'assets/img/pic1.jpg' },
+    { url: 'assets/img/pic2.jpeg' },
+    
+  ];
+  
+  constructor(private route: Router) {}
 
+
+  album(){
+    
+  }
 }

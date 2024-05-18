@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { initializeApp } from "firebase/app";
 import { environment } from 'src/environments/environment';
+import { getFirestore} from "firebase/firestore";
 
 @NgModule({
   declarations: [AppComponent],
@@ -21,4 +22,5 @@ import { environment } from 'src/environments/environment';
 })
 export class AppModule {
   app = initializeApp(environment.firebaseConfig);
+  firestore = getFirestore(this.app)
 }

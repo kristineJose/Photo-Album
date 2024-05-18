@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+    Discover
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,12 +9,38 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Discover</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="3" *ngFor="let image of images">
+        <ion-img [src]="image.url"></ion-img>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button tab="home">
+          <ion-icon name="image-outline"></ion-icon>
+          Photos
+        </ion-tab-button>
+        <ion-tab-button tab="album()">
+          <ion-icon name="albums-outline"></ion-icon>
+          Albums
+        </ion-tab-button>
+        <ion-tab-button tab="library">
+          <ion-icon name="heart-outline"></ion-icon>
+          Favorites
+        </ion-tab-button>
+        <ion-tab-button tab="search">
+          <ion-icon name="star-outline"></ion-icon>
+          HighLights
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+
 </ion-content>
